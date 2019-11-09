@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:hackreactonary/models/spanish_dictionary.dart';
 import 'package:hackreactonary/models/word.dart';
-import 'package:hackreactonary/widgets/english_translation.dart';
+import 'package:hackreactonary/widgets/translation.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
@@ -42,7 +42,10 @@ class _HomePageState extends State<HomePage> {
               Container(
                 padding: EdgeInsets.symmetric(vertical: 15.0),
                 child: Text('Translate Spanish',
-                  style: TextStyle(fontSize: 32.0),
+                  style: TextStyle(
+                    fontSize: 32.0,
+                    fontWeight: FontWeight.bold,
+                  ),
                 )
               ),
               TextFormField(
@@ -70,13 +73,13 @@ class _HomePageState extends State<HomePage> {
                   )
                 )
               ),
+              SizedBox(height: 20.0),
               Container(
-                padding: EdgeInsets.symmetric(vertical: 20),
-              ),
-              Container(
-                child: Row(
+                child: Column(
                   children: <Widget>[
-                    EnglishTranslation(_englishTranslation),
+                    Translation(_englishTranslation, Language.english),
+                    SizedBox(height: 20.0),
+                    Translation(_frenchTranslation, Language.french),
                   ],
                 )
               )
@@ -98,6 +101,7 @@ class _HomePageState extends State<HomePage> {
     if(value.isEmpty || value != _spanishWord) {
       setState(() { 
         _englishTranslation = '';
+        _frenchTranslation = '';
       });
     }
   }
@@ -113,10 +117,12 @@ class _HomePageState extends State<HomePage> {
       if(_spanishWord.isNotEmpty) {
         setState(() {
           _englishTranslation = dictionary.translate(_spanishWord, Language.english);
+          _frenchTranslation = dictionary.translate(_spanishWord, Language.french);
         });
       } else {
         setState(() {
           _englishTranslation = '';
+          _frenchTranslation = '';
         });
       } 
     } else {

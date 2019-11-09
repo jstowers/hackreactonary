@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:hackreactonary/models/word.dart';
 
-class EnglishTranslation extends StatelessWidget {
+class Translation extends StatelessWidget {
 
-  final String englishTranslation;
+  final String translation;
+  final Language language;
 
-  EnglishTranslation(this.englishTranslation);
+  Translation(this.translation, this.language);
 
   @override
   Widget build(BuildContext context) {
 
     final screenWidth = MediaQuery.of(context).size.width;
+    final languageString = LanguageUtils.lookup[language];
 
-    if(englishTranslation.isNotEmpty) {
+
+    if(translation.isNotEmpty) {
       return Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(4.0),
@@ -30,21 +34,20 @@ class EnglishTranslation extends StatelessWidget {
                 child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 5.0),
                   color: Colors.amber[200],
-                  child: Text('English',
+                  child: Text(languageString,
                     style: TextStyle(
                       fontSize: 26.0,
                     )
                   ),
                 ),
               ),
-              //SizedBox(width: 10.0),
               Expanded(
                 flex: 3,
                 child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 5.0),
                   color: Colors.amber[200],
                   child: 
-                    Text(englishTranslation,
+                    Text(translation,
                       style: TextStyle(
                         fontSize: 26.0,
                         fontWeight: FontWeight.bold,

@@ -12,3 +12,12 @@ class Word {
   
   Word(this.language, this.type, this.translations);
 }
+
+abstract class LanguageUtils {
+
+  static final Map<Language,String> lookup = {
+    Language.english: "English",
+    Language.french: "French",
+    Language.spanish: "Spanish",
+  };
+}
