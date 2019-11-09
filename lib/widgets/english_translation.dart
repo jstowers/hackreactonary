@@ -10,7 +10,6 @@ class EnglishTranslation extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final screenWidth = MediaQuery.of(context).size.width;
-    print('screenWidth = $screenWidth');
 
     if(englishTranslation.isNotEmpty) {
       return Card(
@@ -44,14 +43,15 @@ class EnglishTranslation extends StatelessWidget {
                 child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 5.0),
                   color: Colors.amber[200],
-                  child: Text(englishTranslation,
-                        style: TextStyle(
-                          fontSize: 26.0,
-                          fontWeight: FontWeight.bold,
-                        )
-                  ),
+                  child: 
+                    Text(englishTranslation,
+                      style: TextStyle(
+                        fontSize: 26.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                 ),
-              )
+              ),
             ],
           ),
         )

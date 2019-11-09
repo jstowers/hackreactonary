@@ -22,8 +22,7 @@ class SpanishDictionary {
     ),
   };
   
-  // method to translate a word
-  // if given a word in english or french, translate to spanish
+  // translate spanish to english or french
   String translate(String word, Language language) {
     if(isWordDefined(word, language)) {
       return dictionary[word].translations[language];
@@ -31,12 +30,8 @@ class SpanishDictionary {
     return 'word not found';
   }
   
-  
-  // does word exist in dictionary
+  // is word in dictionary
   bool isWordDefined(String word, Language language) {
-    if( dictionary[word] != null && dictionary[word].translations[language].isNotEmpty) {
-      return true;
-    }
-    return false;
+    return dictionary[word] != null && dictionary[word].translations[language].isNotEmpty;
   }
 }
