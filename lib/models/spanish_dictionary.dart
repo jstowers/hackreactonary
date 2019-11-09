@@ -19,7 +19,7 @@ class SpanishDictionary {
           Language.english: 'to return',
           Language.french: 'revenir',
         }
-    ), 
+    ),
   };
   
   // method to translate a word
@@ -28,7 +28,7 @@ class SpanishDictionary {
     if(isWordDefined(word, language)) {
       return dictionary[word].translations[language];
     }
-    return 'word not found in dictionary.';
+    return 'word not found';
   }
   
   

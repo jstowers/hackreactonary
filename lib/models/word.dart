@@ -12,5 +12,3 @@ class Word {
   
   Word(this.language, this.type, this.translations);
 }
-
-

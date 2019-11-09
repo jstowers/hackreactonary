@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+
 import 'package:hackreactonary/models/spanish_dictionary.dart';
 import 'package:hackreactonary/models/word.dart';
+import 'package:hackreactonary/widgets/english_translation.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
@@ -38,15 +40,16 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children: <Widget>[
               Container(
-                padding: EdgeInsets.symmetric(vertical: 20.0),
+                padding: EdgeInsets.symmetric(vertical: 15.0),
                 child: Text('Translate Spanish',
-                  style: TextStyle(fontSize: 20.0),
+                  style: TextStyle(fontSize: 32.0),
                 )
               ),
               TextFormField(
                 decoration: InputDecoration(
                   hintText: 'Ready to learn . . .',
                 ),
+                style: TextStyle(fontSize: 24.0),
                 keyboardType: TextInputType.text,
                 validator: _validateInput,
                 autovalidate: _autoValidate,
@@ -62,6 +65,7 @@ class _HomePageState extends State<HomePage> {
                     'Translate',
                     style: TextStyle(
                       color: Colors.white,
+                      fontSize: 24.0,
                     )
                   )
                 )
@@ -120,28 +124,5 @@ class _HomePageState extends State<HomePage> {
         _autoValidate = true;
       });
     }
-  }
-}
-
-class EnglishTranslation extends StatelessWidget {
-
-  final String englishTranslation;
-
-  EnglishTranslation(this.englishTranslation);
-
-  @override
-  Widget build(BuildContext context) {
-    if(englishTranslation.isNotEmpty) {
-      return(
-        Row(
-          children: <Widget>[
-            Text('English'),
-            Padding(padding: EdgeInsets.symmetric(vertical: 50.0)),
-            Text(englishTranslation),
-          ],
-        )
-      );
-    }
-    return Container();
   }
 }

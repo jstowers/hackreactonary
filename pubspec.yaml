@@ -70,3 +70,14 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: Raleway
+      fonts:
+        - asset: lib/fonts/Raleway-Regular.ttf
+        - asset: lib/fonts/Raleway-Italic.ttf
+          style: italic
+    - family: RobotoMono
+      fonts:
+        - asset: lib/fonts/RobotoMono-Regular.ttf
+        - asset: lib/fonts/RobotoMono-Bold.ttf
+          weight: 700

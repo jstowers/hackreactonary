@@ -1,0 +1,29 @@
+{
+    "verbs": [
+        {
+            "id": 1,
+            "word": "deber",
+            "translations": ["to owe", "devoir"]
+        },
+        {
+            "id": 2,
+            "word": "aullar",
+            "translations": ["to howl", "hurler"]
+        },
+        {
+            "id": 3,
+            "word": "engañar",
+            "translations": ["to trick", "tromper"]
+        },
+        {
+            "id": 4,
+            "word": "patear",
+            "translations": ["to kick", "botter"]
+        },
+        {
+            "id": 5,
+            "word": "levantar",
+            "translations": ["to lift", "soulever"]
+        }
+    ]
+}

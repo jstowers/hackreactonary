@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'HackReactonary Demo',
       theme: ThemeData(
+        fontFamily: 'Raleway',
         primarySwatch: Colors.blue,
       ),
       home: HomePage(title: 'HackReactonary'),

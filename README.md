@@ -1,5 +1,5 @@
 # hackreactonary
 
-A Spanish Word Translator written with Dart/Flutter.
+A Dart/Flutter Spanish Translator and Dictionary.
 
 Highlights Object Oriented Programming (OOP) principles.
