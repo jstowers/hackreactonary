@@ -9,12 +9,12 @@ class MyApp extends StatelessWidget {
   // is redefined here to do something else
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'HackReactonary Demo',
+      title: 'HackReactionary Demo',
       theme: ThemeData(
         fontFamily: 'Raleway',
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(title: 'HackReactonary'),
+      home: HomePage(title: 'HackReactionary'),
     );
   }
 }

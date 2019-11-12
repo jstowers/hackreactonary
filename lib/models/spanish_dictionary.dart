@@ -1,25 +1,40 @@
-
 import 'package:hackreactonary/models/word.dart';
 
 class SpanishDictionary {
   
   Map<String,Word> dictionary = {
     'ayunar': Word(
-        Language.spanish,
-        PartsSpeech.verb,
-        {
-          Language.english: 'to fast',
-          Language.french: 'jeûner'
-        }
+      Language.spanish,
+      PartsSpeech.verb,
+      {
+        Language.english: 'to fast',
+        Language.french: 'jeûner'
+      }
     ),  
     'volver': Word(
-        Language.spanish,
-        PartsSpeech.verb,
-        {
-          Language.english: 'to return',
-          Language.french: 'revenir',
-        }
+      Language.spanish,
+      PartsSpeech.verb,
+      {
+        Language.english: 'to return',
+        Language.french: 'revenir',
+      }
     ),
+    'engañar': Word(
+      Language.spanish,
+      PartsSpeech.verb,
+      {
+        Language.english: 'to deceive',
+        Language.french: 'tromper',
+      }
+    ),
+    'aullar': Word(
+      Language.spanish,
+      PartsSpeech.verb,
+      {
+        Language.english: 'to howl',
+        Language.french: 'hurler',
+      }
+    )
   };
   
   // translate spanish to english or french

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:hackreactonary/models/spanish_dictionary.dart';
+import 'package:hackreactonary/models/spanish_verbs.dart';
 import 'package:hackreactonary/models/word.dart';
 import 'package:hackreactonary/widgets/translation.dart';
 
@@ -19,6 +20,13 @@ class _HomePageState extends State<HomePage> {
   String _spanishWord = '';
   String _englishTranslation = '';
   String _frenchTranslation = '';
+
+  @override
+  void initState() {
+    final collection = SpanishVerbsCollection();
+    collection.loadSpanishVerbs();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
