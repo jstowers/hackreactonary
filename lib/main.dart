@@ -5,8 +5,6 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
-  // this method is defined in an ancestor class, but 
-  // is redefined here to do something else
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'HackReactionary Demo',
